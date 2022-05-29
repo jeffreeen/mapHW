@@ -12,7 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
       openBalloon(myMap, coords);
     });
   };
-  JSON.parse(localStorage['reviews']);
+  var saveReviews = JSON.parse(localStorage['reviews']);
+  for (const saveReview of saveReviews) {
+    reviews.push(saveReview);
+  }
 
 });
 
